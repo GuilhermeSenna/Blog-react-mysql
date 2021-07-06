@@ -15,15 +15,15 @@ function CreatePost() {
     return (
         <div className="CreatePost">
             <div className="uploadPost">
-                <label>Username: </label>
+                <label><strong>Username: </strong></label>
                 <input type="text" onChange={(e) => {
                     setUserName(e.target.value)
                 }} />
-                <label>Title: </label>
+                <label><strong>Title: </strong></label>
                 <input type="text" onChange={(e) => {
                     setTitle(e.target.value)
                 }} />
-                <label>Post Text</label>
+                <label><strong>Post text: </strong></label>
                 <textarea onChange={(e) => {
                     setText(e.target.value)
                 }}></textarea>

@@ -15,13 +15,13 @@ function MainPage() {
         });
     }, [])
 
-    const LikePost = (id) => {
-        alert("you liked a post")
+    function LikePost(id, username) {
         Axios.post(`http://localhost:3002/api/like/${id}`).then((response) => {
-            console.log(response)
+            // Doenst work
             alert("you liked a post")
-            console.log("Laikei")
-        })
+        });
+
+        // if (!alert(`Você curtiu a publicação de ${username}`)) { window.location.reload(); }
     }
     return (
         <div className="MainPage">
@@ -29,10 +29,10 @@ function MainPage() {
                 {postList.map((val, key) => {
                     return (
                         <div className="Post" key={key}>
-                            <h1 className="post-title" onClick={() => (history.push(`/post/${key + 1}`))}>{val.title}</h1>
+                            <h1 className="post-title" onClick={() => (history.push(`/post/${val.ID}`))}>{val.title}</h1>
                             <p>{val.post_text.length > 300 ? val.post_text.substring(0, 300) + " ..." : val.post_text}</p>
-                            <h4>{val.user_name}</h4>
-                            <button className="like_btn" onClick={(() => LikePost(key + 1))}>Like</button>
+                            <h4>- {val.user_name}</h4>
+                            <button className="like_btn" onClick={(() => LikePost(val.ID, val.user_name))}>Like</button>
 
                             <h5>Likes: {val.likes}</h5>
                         </div>

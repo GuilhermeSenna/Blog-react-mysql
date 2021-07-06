@@ -54,6 +54,7 @@ app.post('/api/like/:id', (req, res) => {
             console.log(err);
         }
         console.log(result);
+        res.send('Funcionou');
     });
 });
 

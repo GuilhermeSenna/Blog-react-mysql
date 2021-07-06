@@ -35,6 +35,7 @@ color: white;
 }
 
 .uploadPost{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,7 +98,8 @@ button{
  flex-direction: column;
  justify-content: flex-start;
  padding-left: 10px;
- border:1px solid lightslategrey;
+ box-shadow: 2px 1px 4px black;
+ border:2px solid lightslategrey;
 }
 
 
