@@ -13,23 +13,46 @@ function CreatePost() {
     }
 
     return (
-        <div className="CreatePost">
-            <div className="uploadPost">
-                <label><strong>Username: </strong></label>
-                <input type="text" onChange={(e) => {
+        <div className="wrapper">
+            <form>
+                <h1>Create new post</h1>
+                <div className="group"><input type="text" required="required" onChange={(e) => {
                     setUserName(e.target.value)
-                }} />
-                <label><strong>Title: </strong></label>
-                <input type="text" onChange={(e) => {
+                }} /><span className="highlight"></span><span
+                    className="bar"></span><label>Username</label></div>
+                <div className="group"><input type="text" required="required" onChange={(e) => {
                     setTitle(e.target.value)
-                }} />
-                <label><strong>Post text: </strong></label>
-                <textarea onChange={(e) => {
+                }} /><span className="highlight"></span><span
+                    className="bar"></span><label>Title</label></div>
+                <div className="group"><textarea type="textarea" rows="5" required="required" onChange={(e) => {
                     setText(e.target.value)
-                }}></textarea>
+                }}></textarea><span
+                    className="highlight"></span><span className="bar"></span><label>Post text</label></div>
                 <button onClick={submitPost}>Submit Post</button>
-            </div>
+            </form>
         </div>
+
+
+
+
+
+        // <div className="CreatePost">
+        //     <div className="uploadPost">
+        //         <label><strong>Username: </strong></label>
+        //         <input type="text" onChange={(e) => {
+        //             setUserName(e.target.value)
+        //         }} />
+        //         <label><strong>Title: </strong></label>
+        //         <input type="text" onChange={(e) => {
+        //             setTitle(e.target.value)
+        //         }} />
+        //         <label><strong>Post text: </strong></label>
+        //         <textarea onChange={(e) => {
+        //             setText(e.target.value)
+        //         }}></textarea>
+        //         <button onClick={submitPost}>Submit Post</button>
+        //     </div>
+        // </div>
     )
 }
 

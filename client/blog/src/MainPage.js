@@ -26,8 +26,10 @@ function MainPage() {
     return (
         <div className="MainPage">
             <div className="PostContainer">
+                <h1 style={{ color: "white", fontSize: "3rem", margin: 0 }}>Posts</h1>
                 {postList.map((val, key) => {
                     return (
+
                         <div className="Post" key={key}>
                             <h1 className="post-title" onClick={() => (history.push(`/post/${val.ID}`))}>{val.title}</h1>
                             <p>{val.post_text.length > 300 ? val.post_text.substring(0, 300) + " ..." : val.post_text}</p>

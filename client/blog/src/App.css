@@ -1,3 +1,7 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -86,9 +90,9 @@ button{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: lightblue;
-  box-shadow: 2px 1px 8px black;
-  border:1px solid lightslategrey
+  background-color: #23395d;
+  /* box-shadow: 2px 1px 8px black; */
+  /* border:1px solid coral; */
 }
 
 .Post{
@@ -100,9 +104,8 @@ button{
  padding-left: 10px;
  box-shadow: 2px 1px 4px black;
  border:2px solid lightslategrey;
+ color: white;
 }
-
-
 
 .post-title{
   text-transform: capitalize;
@@ -110,7 +113,7 @@ button{
 }
 
 .Post.individual{
-  background-color: rgb(170, 164, 162);
+  background-color: #23395d;
   max-width: 60%;
   margin: auto;
   margin-top: 20px;
@@ -123,7 +126,7 @@ button{
 }
 
 
-.uploadPost button{
+form button{
   position:relative;
   width: auto;
   color:#ecf0f1;
@@ -143,7 +146,7 @@ button{
   box-shadow: 0px 6px 0px #d35400;
 }
 
-.uploadPost button:active{
+form button:active{
   -webkit-box-shadow: 0px 2px 0px #d35400;
   -moz-box-shadow: 0px 2px 0px #d35400;
   box-shadow: 0px 2px 0px #d35400;
@@ -151,3 +154,91 @@ button{
   top:4px;
 }
 
+
+/*  */
+
+.wrapper{
+  /* margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 500px; */
+  /* border: 2px solid coral; */
+
+}
+
+body {
+  background: #1c2e4a;
+}
+
+
+/* superior | direita | inferior | esquerda */
+form {
+  width: 550px;
+  /* right: -100px; */
+  margin: 60px auto;
+  padding: 0px 0px 20px 20px;
+  border: 2px solid coral;
+  background-color: #23395d;
+}
+
+form h1{
+  color: white;
+}
+
+.group {
+  position: relative;
+  margin: 60px 0;
+}
+textarea {
+  resize: none;
+}
+input, textarea {
+  background: none;
+  color: #c6c6c6;
+  font-size: 24px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 500px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  top: -30px;
+  font-size: 20px;
+  color: coral;
+}
+input:focus ~ .bar:before, textarea:focus ~ .bar:before {
+  width: 500px;
+}
+label {
+  color: #c6c6c6;
+  font-size: 24px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 5px;
+  transition: 300ms ease all;
+}
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+.bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: coral;
+  transition: 300ms ease all;
+  left: 0%;
+}
